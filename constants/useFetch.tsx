@@ -1,9 +1,10 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Homepage from "@/components/Homepage";
 
 const UseFetch = () => {
-     const [data, setData] = useState(null);
+     const [data, setData] = useState<any>();
      const [loading, setLoading] = useState(true);
      const [error, setError] = useState(null);
 
@@ -20,23 +21,26 @@ const UseFetch = () => {
                          num_pages: "1",
                     },
                     headers: {
-                         "X-RapidAPI-Key": "",
+                         "X-RapidAPI-Key": "4bf622eb5dmshc91bed34661df1dp1ec786jsncaab82fcb087",
                          "X-RapidAPI-Host": "jsearch.p.rapidapi.com",
                     },
                };
 
                try {
                     const response = await axios.request(options);
-                    console.log(response.data.data[0]);
+                    // console.log(response.data.data[3]);
+                    setData(response.data.data)
                } catch (error) {
                     console.error(error);
                }
           };
 
-          // fetchData();
+          fetchData();
      }, []);
 
-     return <div>fetch hook</div>;
+     return (<div>
+         <Homepage data={{ data: data }}/>
+     </div>);
 };
 
 export default UseFetch;

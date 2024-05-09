@@ -1,11 +1,14 @@
 import UseFetch from '@/constants/useFetch'
 import React from 'react'
 
-const Homepage = () => {
+const Homepage = ({data}:any) => {
+  data.data?.forEach((item: any) => {
+    console.log("employer_name:", item.employer_name);
+});
   return (
-    <div>Homepage
+    <div>
 
-        <UseFetch/>
+          <p>hello</p>
     </div>
   )
 }

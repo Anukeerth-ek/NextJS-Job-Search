@@ -4,6 +4,8 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Aside from "@/components/Aside";
 import Homepage from "@/components/Homepage";
+import Additional from "@/components/Additional";
+import UseFetch from "@/constants/useFetch";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,11 +25,15 @@ export default function RootLayout({
                     <div className="mx-[250px]">
                          <Navbar />
                     </div>
-                    <div className=" bg-gray-100">
-                         <div className="mx-[250px] flex">
+                    <div className="bg-gray-50">
+                      <div className="mx-[250px] pb-5">
+
+                    <Additional/>
+                      </div>
+                         <div className="mx-[250px] flex ">
                               <Aside />
-                              <div>
-                                   <Homepage />
+                              <div className="ml-14">
+                                  <UseFetch/>
                               </div>
                          </div>
                     </div>

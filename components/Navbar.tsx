@@ -8,11 +8,11 @@ const Navbar = () => {
      const platformName: string = "JOBIT";
      return (
           <nav>
-               <div className="flex mt-6 items-center">
+               <div className="flex py-4 items-center">
                     <h2 className="text-blue-600 text-3xl font-semibold">{platformName}</h2>
                     <ul className="flex  list-none ml-14">
-                         {navLink.map((items, index) => {
-                              return <li className="ml-8 font-semibold text-gray-600 text-base">{items}</li>;
+                         {navLink.map((items:string, index:number) => {
+                              return <li className="mx-[30px] font-semibold text-gray-600 text-base" key={index}>{items}</li>;
                          })}
                     </ul>
                     <div className="flex ml-8">
