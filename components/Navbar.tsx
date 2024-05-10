@@ -23,13 +23,13 @@ const Navbar = () => {
                          <input
                               type="search"
                               placeholder="Search job here"
-                              className="border border-gray-300 ml-10 rounded-3xl pl-3 w-[280px]"
+                              className="border border-gray-300 ml-10 rounded-3xl pl-3 w-[220px]"
                          />
                          <div className="p-[8px] w-8">
                               <CiSearch className="relative right-10  bg-blue-600 text-white rounded-2xl text-2xl" />
                          </div>
                     </div>
-                    <h2 className="text-blue-600 ml-20 font-semibold text-md border border-blue-600 rounded-2xl p-1">
+                    <h2 className="text-blue-600 ml-16 font-semibold text-md border border-blue-600 rounded-2xl p-1">
                          {platformName} <span className="text-green-400">360</span>
                     </h2>
                     <IoIosNotificationsOutline className="relative left-[36px] text-3xl rotate-4" />

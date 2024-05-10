@@ -34,9 +34,9 @@ const Homepage = ({ data }: any) => {
  
 
      return (
-          <div className="flex flex-wrap">
+          <div className="flex flex-wrap w-[1200px]">
                {apiData.map((item: any, index: number) => (
-                    <div key={index} className="bg-white p-4 mb-4 w-80 mr-4 rounded-xl">
+                    <div key={index} className="bg-white p-3 mb-3 w-[310px] mr-4 rounded-xl">
                          <div className="flex items-center justify-between">
                               <div className="flex items-center">
                                  <div className="bg-gray-100 p-2 rounded-lg">

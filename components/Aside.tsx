@@ -4,7 +4,7 @@ import React from "react";
 const Aside = () => {
      return (
           <aside>
-               <div className="w-[260px] bg-white px-4 rounded-lg">
+               <div className="w-[230px] bg-white px-3 rounded-lg">
                     <div className="flex justify-between items-center py-3 border-b border-b-gray-300">
                          <h3 className="font-semibold text-lg">Filters</h3>
                          <h3 className="text-red-400 font-bold text-md">Clear All</h3>
