@@ -1,11 +1,15 @@
-export const navLink: string[] = ["Jobs", "Companies", "Services"];
+export const navLink: string[] = ["Jobs", "Companies", "Services", "Messages"];
 
-export const jobType: string[] = ["Full Time", "Part Time", "Internship", "Project Work", "Volunteering"];
+export const jobType: string[] = ["Full Time", "Part Time", "Internship",  "Volunteering"];
+
+export const sortType: string[] = ["Most Recent", "A-Z", "Top Salary", "Trending"]
 
 export const experienceLevel = [
-     { levels: ["Entry Level", "Intermediate Level", "Expert"] },
+     { levels: ["Fresher","Entry Level", "Intermediate", "Expert"] },
      { yearsOfExperience: [3, 5, 5] },
 ];
+
+export const positionType = ["On-site", "Hybrid", "Remote"]
 
 export const jobProfiles: string[] = [
      "Software Developer",

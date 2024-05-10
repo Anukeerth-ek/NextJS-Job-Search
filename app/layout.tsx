@@ -21,18 +21,19 @@ export default function RootLayout({
 }>) {
      return (
           <html lang="en">
-               <body className={inter.className}>
-                    <div className="mx-[250px]">
+            <body className={`${inter.className} `}>
+
+                    <div className="mx-[180px]">
                          <Navbar />
                     </div>
-                    <div className="bg-gray-50">
-                      <div className="mx-[250px] pb-5">
+                    <div className="bg-gray-100">
+                      <div className="mx-[180px]">
 
                     <Additional/>
                       </div>
-                         <div className="mx-[250px] flex ">
+                         <div className="mx-[180px] flex ">
                               <Aside />
-                              <div className="ml-14">
+                              <div className="ml-6">
                                   <UseFetch/>
                               </div>
                          </div>
