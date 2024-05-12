@@ -29,3 +29,6 @@ export const jobProfiles: string[] = [
      "Scrum Master",
      "Data Scientist",
 ];
+
+
+export const jobs = [1, 2, 3, 4, 5, 6, 7, 8, 9 , 10]

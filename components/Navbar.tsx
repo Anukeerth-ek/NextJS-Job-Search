@@ -8,9 +8,9 @@ const Navbar = () => {
      const platformName: string = "HireU";
      return (
           <nav>
-               <div className="flex py-4 items-center">
+               <div className="flex py-4 items-center ">
                     <h2 className="text-blue-600 text-3xl font-semibold">{platformName}</h2>
-                    <ul className="flex  list-none ml-14">
+                    <ul className="flex  list-none ml-12">
                          {navLink.map((items: string, index: number) => {
                               return (
                                    <li className="mx-[20px] font-semibold text-gray-600 text-base hover:text-black cursor-pointer" key={index}>
