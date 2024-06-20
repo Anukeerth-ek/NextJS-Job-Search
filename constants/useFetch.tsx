@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Homepage from "@/components/Homepage";
+import Homepage from "../components/Homepage";
 
 const UseFetch = () => {
      const [data, setData] = useState<any>();

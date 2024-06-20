@@ -1,10 +1,10 @@
-import { experienceLevel, jobProfiles, jobType, sortType, positionType } from "@/data/Data";
+import { experienceLevel, jobProfiles, jobType, sortType, positionType } from "../data/Data";
 import React from "react";
 
 const Aside = () => {
      return (
           <aside>
-               <div className="w-[230px] bg-white px-3 rounded-lg">
+               <div className="w-[230px] bg-white  text-black px-3 rounded-lg">
                     <div className="flex justify-between items-center py-3 border-b border-b-gray-300">
                          <h3 className="font-semibold text-lg">Filters</h3>
                          <h3 className="text-red-400 font-bold text-md">Clear All</h3>
@@ -21,7 +21,7 @@ const Aside = () => {
                                    <li key={index} className="flex mb-2 mr-4">
                                         {/* Add flex class to the li element to make it flex container */}
                                         <input type="radio" />
-                                        <h3 className="ml-2 font-normal text-sm">{item}</h3>
+                                        <h3 className="ml-2 font-normal  text-sm">{item}</h3>
                                    </li>
                               ))}
                          </ul>
@@ -77,7 +77,7 @@ const Aside = () => {
                          <h3 className="pb-3 text-blue-500">Job Profiles</h3>
                          <ul>
                               {jobProfiles?.map((items: string, index: number) => (
-                                   <li className="flex mb-2 justify-between items-center">
+                                   <li className="flex mb-2 justify-between items-center" key={index}>
                                         <div className="flex">
                                              <input type="checkbox" />
                                              <h3 className="ml-2 font-normal text-sm">{items}</h3>

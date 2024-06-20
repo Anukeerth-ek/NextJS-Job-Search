@@ -3,20 +3,21 @@
 import React, { useState, useEffect } from "react";
 import { CiBookmarkPlus } from "react-icons/ci";
 import { AiOutlineDollar } from "react-icons/ai";
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import { jobs } from "@/data/Data";
 import Image from "next/image";
 import image from '../public/icon.png'
 
+
 const Homepage = ({ data }: any) => {
      const [apiData, setApiData] = useState<any[]>([])
 
-     // const router = useRouter();
-    //  HANDLE JOB DETAILS
-//     const handleJobDetails = (item) => {
-//      // Assuming item.id is the unique identifier for each job item
-//      router.push(`/jobs/${item.id}`);
-//    };
+     const router = useRouter();
+     // HANDLE JOB DETAILS
+    const handleJobDetails = (item:any, event:any) => {
+     // Assuming item.id is the unique identifier for each job item
+     router.push(`/jobs/${item.job_id}`);
+   };
 
      useEffect(() => {
           if (data && data.data) {
@@ -47,8 +48,9 @@ const Homepage = ({ data }: any) => {
 
      return (
           <div className="flex flex-wrap w-[980px]">
-              {apiData.map((item: any, index: number) => (
-                    <div key={index} className="bg-white p-3 mb-3 w-[310px] mr-4 rounded-xl" >
+              {apiData.map((item: any, index: number) =>
+               (
+                    <div key={index} className="bg-white p-3 mb-3 w-[310px] mr-4 rounded-xl cursor-pointer"   onClick={(event) => handleJobDetails(item, event)} >
                          <div className="flex items-center justify-between">
                               <div className="flex items-center">
                                    <div className="bg-gray-100 p-2 rounded-lg">
@@ -98,7 +100,8 @@ const Homepage = ({ data }: any) => {
                               </span>
                          </div>
                     </div>
-               ))}
+               )
+               )}
           </div>
      );
 };
